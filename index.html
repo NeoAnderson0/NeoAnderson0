@@ -1,81 +1,109 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <style>
-        h1 {
-            font-family: 'Century Gothic';
-            text-align: center;
-            font-weight: bold;
-            color: rgb(255, 22, 92);
-            margin-top: 50px;
-        }
-        h2 {
-            font-family: 'Century Gothic';
-            text-align: center;
-            size: 50pt;
-            color: rgb(255, 22, 92);
-            margin-top: 50px;
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<style>
+			body {
+				background: linear-gradient(-45deg, #ffffff, #000000, #000000, #ffffff);
+				background-size: 400% 400%;
+				animation: gradient 20s ease infinite;
+				height: 100vh;
+				scrollbar-width: thin;
+			scrollbar-color: #e6e6e6 #333333;
+			}
+		::-webkit-scrollbar {
+			width: 0px;
+			}
+			h4 {
+			font-family: 'Century Gothic';
+			size: 25pt;
+			color: #ffffff;
+			text-align: justify;
+			margin-left: 150px;
+			margin-right: 150px;
+			}
+			h1 {
+				font-family: 'Century Gothic';
+				font-size: 50px;
+				color: white;
+				text-align: center;
+				margin-top: 50px;
+			}
+			h2 {
+				font-size: 25px;
+				text-align: center;
+				margin-top: 50px;
+			}
+			.image-container {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin-top: 50px;
+			}
+			img {
+				width: 300px;
+				height: auto;
+				border-radius: 10px;
+			}
+			@keyframes gradient {
+				0% {
+					background-position: 0% 50%;
+				}
+				50% {
+					background-position: 100% 50%;
+				}
+				100% {
+					background-position: 0% 50%;
+				}
+			}
+			a {
+				color: white;
+			}
+			@font-face {
+				font-family: 'TakaoGothic';
+				src: url('fonts/TakaoGothic.tff') format('truetype');
+				font-weight: bold;
+				font-style: normal;
+			}
+			.top-container {
+				position: fixed;
+				align-items: left;
+				top: -5%;
+				left: 1.25%;
+				transform: translateX(-200%);
+				text-align: left;
+				width: 1px;
+				height: 1px;
+			}
+			.top-container img {
+				
+				max-width: 200px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<h1>茶の雨です。</h1>
+		<h2><a href="https://neoanderson0.github.io/">🍎</a></h2>
+		
+		<div class="image-container">
+			
+			<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Butyllithium-hexamer-from-xtal-3D-balls-A.png/1024px-Butyllithium-hexamer-from-xtal-3D-balls-A.png" alt="some lake in england">
+		</div>
+		<div class="top-container">
+			<a href="dnadamge1.html">
+			<img src="C:\Users\neowi\Desktop\html 2023\dnad1.png"></a>
+		</div>
 
-        }
+		<h4>                         
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non maximus justo, non eleifend libero. Quisque at hendrerit nunc. Cras a facilisis lacus. Ut non elementum dui. Proin ac tellus nec sapien scelerisque imperdiet. Praesent dui leo, blandit ut augue sit amet, sollicitudin ultricies nulla. Vestibulum eget aliquet nisi. Donec vehicula ex diam, eget scelerisque neque faucibus quis. Quisque at ultrices neque. Etiam vitae eleifend nisl. Nunc id laoreet est. Nunc in sodales nisl.
 
-        li {
-            font-family: 'Century Gothic';
-            text-align: center;
-            size: 50pt;
-            color: rgb(172, 15, 62);
-            margin-top: 50px;   
-        }
-        .image-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        img {
-            width: 400px;
-            height: auto;
-            animation: shake 0.5s infinite;
-        }
-        
-        @keyframes shake {
-            0% { transform: translate(0, 0); }
-            10% { transform: translate(-5px, 0); }
-            20% { transform: translate(5px, 0); }
-            30% { transform: translate(-10px, 0); }
-            40% { transform: translate(5px, 0); }
-            50% { transform: translate(-5px, 0); }
-            60% { transform: translate(5px, 0); }
-            70% { transform: translate(-10px, 0); }
-            80% { transform: translate(5px, 0); }
-            90% { transform: translate(-5px, 0); }
-            100% { transform: translate(0, 0); }
-        }
-        
-        body {background-color: rgb(50, 50, 50);}
-        </style> 
-    </head>
-    <body>
-        <h1> THE APPLE KNOWS YOUR CURRENT LOCATION </h1>
-        <h2><span id="ip-address"></span></h2>
-        <script src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
-        <script>
-            // Function to get the IP address of the user
-            function getIpAddress(){
-                fetch("https://api.ipify.org/?format=json")
-                    .then(response => response.json())
-                    .then(data => {
-                        document.getElementById("ip-address").innerHTML = data.ip;
-                    })
-                    .catch(error => {
-                        console.log(error);
-                    })
-            }
-
-            getIpAddress();
-        </script>
-
-        <div class="image-container">
-            <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/25d45014-8cc3-4c98-b02c-5a0cf3a55ddd/dcrjbvx-b5078bbf-03ff-4625-b214-35c3f9fefc4c.png/v1/fill/w_900,h_900,strp/red_apple_on_a_transparent_background__by_prussiaart_dcrjbvx-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTAwIiwicGF0aCI6IlwvZlwvMjVkNDUwMTQtOGNjMy00Yzk4LWIwMmMtNWEwY2YzYTU1ZGRkXC9kY3JqYnZ4LWI1MDc4YmJmLTAzZmYtNDYyNS1iMjE0LTM1YzNmOWZlZmM0Yy5wbmciLCJ3aWR0aCI6Ijw9OTAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.Y0-7z3OBNt3CbKeZrPiWJFD-4LhVF7I9iC2wADeZEAU" alt="photo of a red apple">
-            <div>
-        </body>
-    </html>
+			Duis leo justo, vehicula pulvinar malesuada sit amet, venenatis eu lorem. In semper, urna vel consequat aliquam, nisl lorem lacinia mauris, ac ornare diam diam id augue. Suspendisse suscipit accumsan mauris. Duis ac enim ultricies, aliquam dolor vestibulum, ultricies ante. Nullam eu justo lobortis, varius arcu eu, tincidunt justo. Ut feugiat porta ligula, nec lacinia ex convallis eget. Vivamus nec volutpat felis. Aliquam ut tortor vitae odio sodales porttitor. In sit amet enim sit amet erat porttitor dictum. Aenean condimentum, metus ac feugiat malesuada, elit mauris varius enim, at scelerisque enim elit sed enim. Praesent ac facilisis elit. Sed faucibus semper est, quis pellentesque odio eleifend sed. Nullam ipsum neque, pretium non purus a, aliquet sagittis lectus.
+			
+			Suspendisse vel nisi ac sem aliquam laoreet quis eget neque. Quisque est nunc, euismod quis ornare ac, congue in metus. Phasellus ut elit quis neque molestie congue. Morbi tincidunt turpis ac libero molestie feugiat. Morbi convallis sodales dolor, nec cursus erat ullamcorper quis. Nulla justo odio, ultrices a ultricies nec, elementum eget tortor. Vivamus egestas augue eu sollicitudin pellentesque. Nullam sed sapien massa. Sed hendrerit, tellus at sodales ultricies, lectus tellus gravida sapien, a iaculis mauris sapien sed augue. Duis venenatis risus ac ligula dignissim, vitae tempor quam porttitor. Pellentesque blandit semper ipsum, ac malesuada ligula tristique in. Nulla tristique ligula nunc, vitae pellentesque arcu iaculis ultricies. Curabitur velit ex, aliquet sit amet ornare ac, convallis pretium metus. Duis facilisis maximus nunc sit amet ullamcorper. Nam sit amet tellus bibendum, auctor arcu in, sollicitudin mauris.
+			
+			Duis ut nisl eu sapien gravida semper. Etiam dolor enim, semper vehicula libero ut, finibus efficitur felis. Pellentesque malesuada sem quis purus luctus facilisis. Morbi molestie porta leo id venenatis. Vivamus vehicula, nisi sit amet vulputate rutrum, ante mi imperdiet urna, non congue libero nisl non felis. Curabitur porttitor, nulla sed porttitor blandit, lacus lorem congue mauris, in ultrices lacus erat et diam. Morbi eu porta risus. Fusce efficitur cursus neque, vitae efficitur ante dignissim vitae. Morbi pretium vehicula sem vel hendrerit. Sed ac quam viverra, suscipit tellus eu, vestibulum magna. Maecenas efficitur lectus eu nunc pellentesque, eu commodo massa ullamcorper.
+			
+			Ut urna justo, finibus ut eros pretium, maximus sollicitudin nunc. Pellentesque dapibus enim id quam vestibulum, in interdum turpis viverra. Suspendisse lobortis tortor sed magna volutpat blandit. Integer convallis augue nec arcu fringilla semper. Donec euismod sollicitudin ligula at rutrum. Nunc quis molestie nulla. Sed a rutrum dui. Quisque tempor sapien porta porta eleifend. In posuere tellus ut est eleifend suscipit quis quis leo. Donec a lacinia magna, pretium faucibus lacus. Vestibulum efficitur tortor ante, nec aliquet purus rutrum quis. Aenean nec elit mattis, posuere magna sed, aliquet libero. Phasellus pharetra eros nulla. Sed blandit quam interdum egestas luctus. Aenean efficitur, dolor ut dignissim lacinia, eros purus accumsan leo, sit amet tincidunt neque enim id erat
+		</h4>
+	</body>
+	</html>
